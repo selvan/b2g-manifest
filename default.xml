@@ -9,6 +9,8 @@
           fetch="git://github.com/mozilla-b2g/" />
   <remote name="mozilla"
 	  fetch="git://github.com/mozilla/" />
+  <remote name="naobsd"
+    fetch="git://github.com/naobsd/" />    
   <default revision="refs/tags/android-4.0.4_r2.1"
            remote="linaro"
            sync-j="4" />
@@ -94,13 +96,9 @@
   <project path="system/netd" name="platform/system/netd" />
   <project path="system/vold" name="platform/system/vold" />
 
-  <!-- Emulator specific things -->
-  <project path="development" name="platform/development" revision="435a7da6d02083ba6583e1654db351991cf79578" />
-  <project path="device/generic/goldfish" name="device/generic/goldfish" />
-  <project path="prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6" name="platform/prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6" revision="master" />
-  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6" revision="master" />
-  <project path="prebuilts/tools" name="platform/prebuilts/tools" revision="master" />
-  <project path="prebuilts/qemu-kernel" name="platform/prebuilts/qemu-kernel" revision="master" />
-  <project path="sdk" name="platform/sdk" revision="0d8f973905a4925e00eb9e32887c192b2148b29f" />
+  <!-- Allwinner a10 related things-->
+  <project path="device/allwinner/a10" name="cm_device_allwinner_a10" remote="naobsd" revision="master"/>
+  <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" />
+
 
 </manifest>
